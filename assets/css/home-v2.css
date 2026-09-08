@@ -28,6 +28,18 @@
 .v2-hero .photo{aspect-ratio:5/4;border-radius:0 0 0 100px;overflow:hidden;max-width:560px;justify-self:end;width:100%}
 .v2-hero .photo img{width:100%;height:100%;object-fit:cover;display:block}
 
+/* gewerkt voor: stille rij, geen beweging */
+.v2-clients{border-bottom:1px solid var(--line)}
+.v2-clients .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 3vw;padding-top:1.6rem;padding-bottom:1.6rem}
+.v2-clients .label{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-right:1vw}
+.v2-clients ul{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 4vw;list-style:none;margin:0;padding:0}
+.v2-clients li{display:flex;align-items:center;gap:.6rem;height:34px;filter:grayscale(1);opacity:.7;transition:filter .3s,opacity .3s}
+.v2-clients li:hover{filter:none;opacity:1}
+.v2-clients img{height:100%;width:auto;display:block}
+.v2-clients li:first-child img{height:30px}
+.v2-clients li span{font-weight:500;font-size:.95rem;white-space:nowrap}
+@media (max-width:900px){.v2-clients li{height:28px}.v2-clients .label{width:100%;margin:0}}
+
 /* werk: gelijke, rustige blokken */
 .v2-work{padding:5vw 0 4vw}
 .v2-work h2{margin-bottom:2.5vw}
