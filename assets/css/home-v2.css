@@ -7,7 +7,7 @@
 .v2 h2{font-size:var(--fs-h2);line-height:1.12}
 .v2 h3{font-size:var(--fs-h3);line-height:1.15}
 .v2 p{margin:0;line-height:1.6}
-.v2 .lead{font-size:var(--fs-large);line-height:1.45;color:var(--ink-2);max-width:30ch}
+.v2 .lead{font-size:var(--fs-large);line-height:1.45;color:var(--ink-2);max-width:40ch;text-wrap:balance}
 .v2 .btn{display:inline-flex;align-items:center;gap:.6em;padding:1.05em 1.8em;border:2px solid #000;border-radius:300px;font-weight:500;font-size:1rem;line-height:1;color:#000;text-decoration:none;background:transparent;transition:background-color .2s,color .2s}
 .v2 .btn svg{width:1em;height:1em;transition:transform .2s}
 .v2 .btn:hover{background:#000;color:#fff}
