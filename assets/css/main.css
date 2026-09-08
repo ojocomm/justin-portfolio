@@ -227,7 +227,7 @@ a.sqs-block-image-link{display:block}
 .sqs-shape-block-outer-container{position:relative;height:100%}
 .sqs-shape-block-container{position:relative;display:none;height:100%;width:100%}
 .sqs-shape-block-container-system_desktop{display:flex}
-svg.sqs-shape{display:block;overflow:visible;position:absolute;inset:0;fill:var(--shape-block-background-color,transparent);stroke:var(--shape-block-stroke-color,none)}
+svg.sqs-shape{display:block;overflow:visible;position:absolute;top:0;left:0;width:100%;height:100%;fill:var(--shape-block-background-color,transparent);stroke:var(--shape-block-stroke-color,none)}
 @media screen and (max-width:767px){
   .sqs-shape-block-container-system_desktop{display:flex}
 }
