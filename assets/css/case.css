@@ -1,0 +1,78 @@
+/* Casepagina — bouwt op de tokens uit main.css en de componenten uit home-v2.css (.v2-scope) */
+.case-page{--c:hsl(32,100%,88%)}
+
+/* hero */
+.case-hero{padding:calc(var(--header-height) + 4vw) 0 3.5vw;background:var(--c)}
+.case-hero .kicker{display:flex;flex-wrap:wrap;gap:.3rem 1rem;align-items:baseline;font-weight:500;margin-bottom:1.4rem}
+.case-hero .kicker span{font-weight:400;font-size:.9rem;color:var(--ink-3);display:inline-flex;align-items:center}
+.case-hero .kicker .dot{display:inline-block;flex:0 0 5px;width:5px;height:5px;border-radius:50%;background:var(--ink-3);margin:0 .9em;vertical-align:middle}
+.case-hero h1{font-size:clamp(2.2rem,3.8vw,3.6rem);line-height:1.08;font-weight:500;letter-spacing:-.02em;margin:0 0 1.2rem;max-width:22ch;text-wrap:balance}
+.case-hero .intro{font-size:var(--fs-large);line-height:1.5;color:var(--ink-2);max-width:52ch}
+.case-hero .case-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.5rem 2rem;margin:3vw 0 0;padding:1.4rem 0 0;border-top:1px solid hsla(var(--black-hsl),.2);list-style:none}
+.case-hero .case-facts small{display:block;font-size:.75rem;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3);margin-bottom:.3rem}
+.case-hero .case-facts b{font-weight:500;font-size:1rem;line-height:1.4}
+
+/* body met zijbalk */
+.case-layout{display:grid;grid-template-columns:minmax(0,1fr) 264px;gap:4rem 6vw;padding:4vw 0}
+.case-aside{position:sticky;top:calc(var(--header-height) + 24px);align-self:start}
+.case-aside h4{margin:0 0 .8rem;font-size:.75rem;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3);font-weight:500}
+.case-aside ol{list-style:none;margin:0 0 2rem;padding:0;font-size:.92rem}
+.case-aside ol a{display:block;padding:.35rem 0;text-decoration:none;color:var(--ink-2);border-bottom:1px solid hsla(var(--black-hsl),.08)}
+.case-aside ol a:hover{color:var(--ink)}
+.case-aside .tags{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;margin:0;padding:0}
+.case-aside .tags li{font-size:.8rem;padding:.3em .8em;border-radius:300px;background:var(--c)}
+
+/* secties */
+.case-main section{margin:0 0 4.5rem;scroll-margin-top:calc(var(--header-height) + 20px)}
+.case-main h2{font-size:clamp(1.5rem,2.2vw,2rem);font-weight:500;letter-spacing:-.015em;line-height:1.15;margin:0 0 1.2rem;text-wrap:balance}
+.case-main h2::before{content:'';display:block;width:28px;height:2px;background:hsla(var(--black-hsl),.4);margin-bottom:1.1rem}
+.case-main p{max-width:62ch;line-height:1.65;color:var(--ink-2);margin:0 0 1rem}
+.case-main p strong{color:var(--ink);font-weight:500}
+.case-main figure{margin:1.8rem 0 0}
+.case-main figure .frame{background:var(--c);border-radius:0 0 0 60px;padding:5% 6%}
+.case-main figure img{width:100%;height:auto;display:block}
+.case-main figcaption{font-size:.88rem;color:var(--ink-3);margin-top:.7rem}
+
+/* in het kort */
+.case-tldr{display:grid;gap:0;border-top:1px solid var(--line)}
+.case-tldr div{display:grid;grid-template-columns:110px minmax(0,1fr);gap:1.5rem;padding:1rem 0;border-bottom:1px solid var(--line)}
+.case-tldr small{font-size:.75rem;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3);padding-top:.3em}
+.case-tldr p{margin:0;max-width:none}
+
+/* inzichten */
+.case-insights{display:grid;gap:1rem;list-style:none;margin:1.5rem 0 0;padding:0;counter-reset:ins}
+.case-insights li{counter-increment:ins;display:grid;grid-template-columns:2.2rem minmax(0,1fr);gap:1rem;padding:1.2rem 1.3rem;background:hsla(var(--black-hsl),.035);border-radius:6px}
+.case-insights li::before{content:counter(ins,decimal-leading-zero);font-size:.85rem;color:var(--ink-3);padding-top:.25em}
+.case-insights b{display:block;font-weight:500;margin-bottom:.25rem}
+.case-insights p{margin:0;font-size:.95rem;max-width:none}
+
+/* keuzes */
+.case-decision{padding:1.6rem 0;border-top:1px solid var(--line)}
+.case-decision:last-of-type{border-bottom:1px solid var(--line)}
+.case-decision h3{font-size:1.15rem;font-weight:500;margin:0 0 .6rem}
+.case-decision p{margin:0;font-size:.98rem}
+.case-decision .afweging{margin-top:.6rem;padding-left:.9rem;border-left:2px solid var(--c);color:var(--ink-3);font-size:.92rem}
+
+/* flow */
+.case-flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.8rem;list-style:none;margin:1.5rem 0 0;padding:0;counter-reset:step}
+.case-flow li{counter-increment:step;padding:.9rem 1rem 1rem;background:hsla(var(--black-hsl),.035);border-radius:6px;font-size:.9rem;line-height:1.4}
+.case-flow li::before{content:counter(step);display:inline-flex;width:1.6rem;height:1.6rem;align-items:center;justify-content:center;border-radius:50%;background:var(--c);font-size:.8rem;font-weight:500;margin-bottom:.5rem}
+.case-flow b{display:block;font-weight:500;margin-bottom:.15rem}
+
+/* volgende case */
+.case-next{border-top:1px solid var(--line)}
+.case-next .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:center;justify-content:space-between;padding-top:2.2rem;padding-bottom:2.2rem}
+.case-next small{display:block;font-size:.78rem;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3);margin-bottom:.3rem}
+
+@media (max-width:980px){
+  .case-layout{grid-template-columns:1fr}
+  .case-aside{position:static;order:-1}
+  .case-aside ol{display:none}
+  .case-hero .case-facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .case-flow{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .case-flow li:last-child{grid-column:1/-1}
+}
+@media (max-width:560px){
+  .case-hero .case-facts{grid-template-columns:1fr}
+  .case-tldr div{grid-template-columns:1fr;gap:.3rem}
+}
