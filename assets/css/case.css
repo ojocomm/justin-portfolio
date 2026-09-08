@@ -15,7 +15,8 @@
 .case-hero .case-facts b{font-weight:500;font-size:1rem;line-height:1.4}
 
 /* body met zijbalk */
-.case-layout{display:grid;grid-template-columns:minmax(0,1fr) 264px;gap:4rem 6vw;padding:4vw 0}
+.case-layout{padding:4vw 0}
+.case-main{max-width:46rem}
 .case-aside{position:sticky;top:calc(var(--header-height) + 24px);align-self:start}
 .case-aside h4{margin:0 0 .8rem;font-size:.75rem;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3);font-weight:500}
 .case-aside ol{list-style:none;margin:0 0 2rem;padding:0;font-size:.92rem}
@@ -67,9 +68,6 @@
 .case-next small{display:block;font-size:.78rem;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3);margin-bottom:.3rem}
 
 @media (max-width:980px){
-  .case-layout{grid-template-columns:1fr}
-  .case-aside{position:static;order:-1}
-  .case-aside ol{display:none}
   .case-hero .case-facts{grid-template-columns:repeat(2,minmax(0,1fr))}
   .case-flow{grid-template-columns:repeat(2,minmax(0,1fr))}
   .case-flow li:last-child{grid-column:1/-1}
