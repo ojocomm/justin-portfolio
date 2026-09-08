@@ -1,6 +1,9 @@
 # Schone URL's zoals op Squarespace: /about -> about.html
 Options -MultiViews
 RewriteEngine On
+# Oude .html-adressen permanent naar schone URL's (voorkomt de nginx-cache op .html)
+RewriteCond %{THE_REQUEST} \s/([^\s?]+)\.html[\s?]
+RewriteRule ^ /%1 [R=301,L]
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.+?)/?$ $1.html [L]
