@@ -1,5 +1,10 @@
 /* Casepagina — bouwt op de tokens uit main.css en de componenten uit home-v2.css (.v2-scope) */
+/* casekleur volgt de kaart op de homepage */
 .case-page{--c:hsl(32,100%,88%)}
+.page-case-wp .case-page{--c:hsl(135,80%,88%)}
+.page-case-ambiance .case-page{--c:hsl(32,100%,88%)}
+.page-case-hoppenbrouwers .case-page{--c:hsl(226.67,60%,94.12%)}
+.page-case-etz .case-page{--c:hsl(153,57%,91%)}
 
 /* hero */
 .case-hero{padding:calc(var(--header-height) + 4vw) 0 0;background:var(--c);overflow:hidden}
