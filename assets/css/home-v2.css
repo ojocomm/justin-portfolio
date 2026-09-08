@@ -19,7 +19,7 @@
 .v2 .link:hover svg{transform:translateX(3px)}
 
 /* hero: past in één scherm, weinig tekst */
-.v2-hero{padding-top:calc(var(--header-height) + 4vw);padding-bottom:2.5vw;background:var(--c-hop);position:relative;overflow:hidden}
+.v2-hero{padding-top:calc(var(--header-height) + 4vw);padding-bottom:5vw;background:var(--c-hop);position:relative;overflow:hidden}
 .v2-hero .wrap:first-child{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:4vw;align-items:center}
 .v2-hero h1 .line{display:block;overflow:hidden}
 .v2-hero h1 .line>span{display:block}
@@ -27,8 +27,6 @@
 .v2-hero .actions{display:flex;flex-wrap:wrap;gap:.8rem 1.4rem;align-items:center}
 .v2-hero .photo{aspect-ratio:5/4;border-radius:0 0 0 100px;overflow:hidden;max-width:560px;justify-self:end;width:100%}
 .v2-hero .photo img{width:100%;height:100%;object-fit:cover;display:block}
-.v2-hero .clients{display:flex;flex-wrap:wrap;gap:.6rem 2.2rem;margin-top:3.5vw;padding-top:1.4rem;border-top:1px solid hsla(var(--black-hsl),.15);font-size:.9rem;color:var(--ink-2)}
-.v2-hero .clients span:first-child{color:var(--ink-3)}
 
 /* werk: gelijke, rustige blokken */
 .v2-work{padding:5vw 0 4vw}
