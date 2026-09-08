@@ -38,7 +38,7 @@
 .v2-clients img{height:100%;width:auto;display:block}
 .v2-clients li:first-child img{height:30px}
 .v2-clients li.wp img{height:44px}
-.v2-clients li.sq img{height:40px}
+.v2-clients li.sq img{height:44px}
 .v2-clients li span{font-weight:500;font-size:.95rem;white-space:nowrap}
 @media (max-width:900px){.v2-clients li{height:28px}.v2-clients .label{width:100%;margin:0}}
 
