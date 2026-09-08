@@ -74,6 +74,8 @@
 .case-next{border-top:1px solid var(--line)}
 .case-next .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:center;justify-content:space-between;padding-top:2.2rem;padding-bottom:2.2rem}
 .case-next small{display:block;font-size:.78rem;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3);margin-bottom:.3rem}
+.case-next .next{text-align:right;margin-left:auto}
+.case-next .next small{text-align:right}
 
 @media (max-width:980px){
   .case-layout{grid-template-columns:1fr;gap:2.5rem}
