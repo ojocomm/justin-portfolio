@@ -21,8 +21,10 @@
 .case-hero .case-facts b{font-weight:500;font-size:1rem;line-height:1.4}
 
 /* body met zijbalk */
-.case-layout{padding:clamp(5rem,8vw,8.5rem) 0 4vw}
-.case-main{max-width:52rem;margin:0 auto}
+.case-layout{display:grid;grid-template-columns:minmax(0,52rem) 210px;gap:3rem 5rem;justify-content:center;padding:clamp(5rem,8vw,8.5rem) 0 4vw}
+.case-main{max-width:52rem}
+.case-aside ul.werk{list-style:none;margin:0;padding:0;font-size:.9rem;color:var(--ink-2)}
+.case-aside ul.werk li{padding:.45rem 0;border-bottom:1px solid hsla(var(--black-hsl),.08)}
 .case-aside{position:sticky;top:calc(var(--header-height) + 24px);align-self:start}
 .case-aside h4{margin:0 0 .8rem;font-size:.75rem;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3);font-weight:500}
 .case-aside ol{list-style:none;margin:0 0 2rem;padding:0;font-size:.92rem}
@@ -74,6 +76,10 @@
 .case-next small{display:block;font-size:.78rem;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3);margin-bottom:.3rem}
 
 @media (max-width:980px){
+  .case-layout{grid-template-columns:1fr;gap:2.5rem}
+  .case-aside{position:static;order:-1}
+  .case-aside ul.werk{display:flex;flex-wrap:wrap;gap:.5rem;color:var(--ink)}
+  .case-aside ul.werk li{border:0;padding:.3em .8em;background:var(--c);border-radius:300px;font-size:.85rem}
   .case-hero .case-facts{gap:1.2rem 2.5rem}
   .case-flow{grid-template-columns:repeat(2,minmax(0,1fr))}
   .case-flow li:last-child{grid-column:1/-1}
