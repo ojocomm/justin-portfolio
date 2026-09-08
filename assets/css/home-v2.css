@@ -126,3 +126,8 @@
   .v2-case{padding:5vw 0}
   .v2 .wrap{padding:0 6vw}
 }
+
+/* portfolio-overzichtspagina */
+.page-portfolio .v2-work{padding-top:calc(var(--header-height) + 4.5vw)}
+.page-portfolio .pf-title{font-size:clamp(2.4rem,4.2vw,4rem);margin:0 0 1rem}
+.page-portfolio .pf-lead{margin-bottom:1.5vw;max-width:44ch}

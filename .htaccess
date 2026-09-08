@@ -1,6 +1,8 @@
 # Schone URL's zoals op Squarespace: /about -> about.html
 Options -MultiViews
 RewriteEngine On
+# Oude portfolio-URL
+RewriteRule ^home-1-2/?$ /portfolio [R=301,L]
 # Oude .html-adressen permanent naar schone URL's (voorkomt de nginx-cache op .html)
 RewriteCond %{THE_REQUEST} \s/([^\s?]+)\.html[\s?]
 RewriteRule ^ /%1 [R=301,L]
