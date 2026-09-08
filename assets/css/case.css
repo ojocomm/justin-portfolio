@@ -16,7 +16,7 @@
 
 /* body met zijbalk */
 .case-layout{padding:4vw 0}
-.case-main{max-width:46rem}
+.case-main{max-width:46rem;margin:0 auto}
 .case-aside{position:sticky;top:calc(var(--header-height) + 24px);align-self:start}
 .case-aside h4{margin:0 0 .8rem;font-size:.75rem;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3);font-weight:500}
 .case-aside ol{list-style:none;margin:0 0 2rem;padding:0;font-size:.92rem}
