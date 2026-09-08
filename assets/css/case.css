@@ -15,7 +15,7 @@
 .case-hero .case-facts b{font-weight:500;font-size:1rem;line-height:1.4}
 
 /* body met zijbalk */
-.case-layout{padding:4vw 0}
+.case-layout{padding:6.5vw 0 4vw}
 .case-main{max-width:46rem;margin:0 auto}
 .case-aside{position:sticky;top:calc(var(--header-height) + 24px);align-self:start}
 .case-aside h4{margin:0 0 .8rem;font-size:.75rem;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3);font-weight:500}
