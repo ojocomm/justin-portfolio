@@ -387,3 +387,16 @@ svg.sqs-shape{display:block;overflow:visible;position:absolute;top:0;left:0;widt
 .to-top:hover{background:#000;color:#fff}
 .to-top svg{width:20px;height:20px}
 @media (prefers-reduced-motion:reduce){.to-top{transition:none;transform:none}}
+
+/* ---- footer: contactblok op alle pagina's */
+.site-footer2{background:hsl(24,36.84%,81.37%);color:#000}
+.ft-wrap{max-width:var(--maxPageWidth);margin:0 auto;padding:5vw var(--pagePadding);display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:2rem 4vw;align-items:center}
+.ft-wrap h2{font-family:var(--heading-font);font-weight:500;letter-spacing:-.015em;font-size:var(--fs-h2);line-height:1.12;margin:0 0 .8rem;text-wrap:balance}
+.ft-wrap>div>p{margin:0;color:#3d3d3b;max-width:38ch;line-height:1.6}
+.ft-ways{display:grid;gap:1rem;list-style:none;margin:0;padding:0}
+.ft-ways li{display:grid;gap:.15rem}
+.ft-ways small{font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:#6f6e6a}
+.ft-ways a{font-size:var(--fs-large);text-decoration:none;font-weight:500;color:#000;background-image:linear-gradient(currentColor,currentColor);background-repeat:no-repeat;background-size:100% 1px;background-position:0 100%;width:max-content;max-width:100%}
+.ft-bottom{border-top:1px solid hsla(0,0%,0%,.15)}
+.ft-bottom .in{max-width:var(--maxPageWidth);margin:0 auto;padding:1.1rem var(--pagePadding);font-size:.85rem;color:#3d3d3b;display:flex;flex-wrap:wrap;gap:.5rem 2rem;justify-content:space-between}
+@media (max-width:900px){.ft-wrap{grid-template-columns:1fr}}
