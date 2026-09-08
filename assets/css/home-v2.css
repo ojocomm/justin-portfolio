@@ -1,5 +1,5 @@
 /* Homepage v2 — bouwt op de tokens en header/footer uit main.css */
-.v2{--gutter:var(--pagePadding);--maxw:var(--maxPageWidth);--c-ambiance:hsl(32,100%,88%);--c-hop:hsl(226.67,60%,94.12%);--c-etz:hsl(153,57%,91%);--c-wp:hsl(24,36.84%,81.37%);--ink:#000;--ink-2:#3d3d3b;--ink-3:#6f6e6a;--line:hsla(var(--black-hsl),.12);color:var(--ink);background:#fff}
+.v2{--gutter:var(--pagePadding);--maxw:var(--maxPageWidth);--c-ambiance:hsl(32,100%,88%);--c-hop:hsl(226.67,60%,94.12%);--c-etz:hsl(153,57%,91%);--c-wp:hsl(135,80%,88%);--c-contact:hsl(24,36.84%,81.37%);--ink:#000;--ink-2:#3d3d3b;--ink-3:#6f6e6a;--line:hsla(var(--black-hsl),.12);color:var(--ink);background:#fff}
 .v2 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter)}
 .v2 .eyebrow{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin:0 0 1.2rem}
 .v2 h1,.v2 h2,.v2 h3{font-family:var(--heading-font);font-weight:500;letter-spacing:-.02em;margin:0;text-wrap:balance}
@@ -76,7 +76,7 @@
 .v2-about p{color:var(--ink-2);max-width:48ch;margin-bottom:1.4rem}
 
 /* contact */
-.v2-contact{padding:5vw 0;background:var(--c-wp)}
+.v2-contact{padding:5vw 0;background:var(--c-contact)}
 .v2-contact .wrap{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:2rem 4vw;align-items:center}
 .v2-contact h2{margin-bottom:.8rem}
 .v2-contact p{color:var(--ink-2);max-width:36ch}
