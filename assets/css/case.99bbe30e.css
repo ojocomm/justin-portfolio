@@ -25,7 +25,9 @@
 /* desktop: feiten altijd op één rij; lange waarden breken binnen hun kolom */
 @media (min-width:981px){
   .case-hero .case-facts{flex-wrap:nowrap;gap:1.2rem 2.25rem}
-  .case-hero .case-facts li{flex:0 1 auto;min-width:0}
+  .case-hero .case-facts li{flex:0 0 auto}
+  .case-hero .case-facts li:nth-child(3){flex:0 1 auto;min-width:0}
+  .case-hero .case-facts b{font-size:.95rem}
 }
 
 /* body met zijbalk */
