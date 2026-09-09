@@ -36,12 +36,12 @@
 .case-aside .tags li{font-size:.8rem;padding:.3em .8em;border-radius:300px;background:var(--c)}
 
 /* secties */
-.case-main section{margin:0 0 4.5rem;scroll-margin-top:calc(var(--header-height) + 20px)}
+.case-main section{margin:0 0 3.5rem;scroll-margin-top:calc(var(--header-height) + 20px)}
 .case-main h2{font-size:clamp(1.5rem,2.2vw,2rem);font-weight:500;letter-spacing:-.015em;line-height:1.15;margin:0 0 1.2rem;text-wrap:balance}
 .case-main h2::before{content:'';display:block;width:28px;height:2px;background:hsla(var(--black-hsl),.4);margin-bottom:1.1rem}
 .case-main p{max-width:none;line-height:1.65;color:var(--ink-2);margin:0 0 1rem}
 .case-main p strong{color:var(--ink);font-weight:500}
-.case-main figure{margin:1.8rem 0 0}
+.case-main figure{margin:1.8rem 0 .4rem}
 .case-main figure .frame{background:var(--c);border-radius:0 0 0 60px;padding:5% 6%}
 .case-main figure img{width:100%;height:auto;display:block}
 .case-main figcaption{font-size:.88rem;color:var(--ink-3);margin-top:.7rem}
