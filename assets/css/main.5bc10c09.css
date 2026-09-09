@@ -400,3 +400,6 @@ svg.sqs-shape{display:block;overflow:visible;position:absolute;top:0;left:0;widt
 .ft-bottom{border-top:1px solid hsla(0,0%,0%,.15)}
 .ft-bottom .in{max-width:var(--maxPageWidth);margin:0 auto;padding:1.1rem var(--pagePadding);font-size:.85rem;color:#3d3d3b;display:flex;flex-wrap:wrap;gap:.5rem 2rem;justify-content:space-between}
 @media (max-width:900px){.ft-wrap{grid-template-columns:1fr}}
+
+/* About: paginakop is een h1 (semantiek/SEO), visueel op h2-formaat */
+.page-about h1{font-size:var(--fs-h2);line-height:1.12;color:var(--headingColor)}

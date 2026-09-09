@@ -42,8 +42,8 @@
     var items = [];
     doc.querySelectorAll('.page-section, .site-footer').forEach(function (sec) {
       var i = 0;
-      sec.querySelectorAll(textSel).forEach(function (el) { el.classList.add('preSlide'); el.style.transitionDelay = (0.06 * i++).toFixed(3) + 's'; items.push(el); });
-      sec.querySelectorAll(fadeSel).forEach(function (el) { el.classList.add('preFade'); el.style.transitionDelay = (0.06 * i++).toFixed(3) + 's'; items.push(el); });
+      sec.querySelectorAll(textSel).forEach(function (el) { el.classList.add('preSlide'); el.style.transitionDelay = Math.min(0.06 * i++, 0.36).toFixed(3) + 's'; items.push(el); });
+      sec.querySelectorAll(fadeSel).forEach(function (el) { el.classList.add('preFade'); el.style.transitionDelay = Math.min(0.06 * i++, 0.36).toFixed(3) + 's'; items.push(el); });
     });
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
