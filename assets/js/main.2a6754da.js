@@ -45,6 +45,18 @@
       sec.querySelectorAll(textSel).forEach(function (el) { el.classList.add('preSlide'); el.style.transitionDelay = Math.min(0.06 * i++, 0.36).toFixed(3) + 's'; items.push(el); });
       sec.querySelectorAll(fadeSel).forEach(function (el) { el.classList.add('preFade'); el.style.transitionDelay = Math.min(0.06 * i++, 0.36).toFixed(3) + 's'; items.push(el); });
     });
+    /* alles wat bij het laden al in beeld staat verschijnt direct en tegelijk;
+       alleen wat later in beeld scrollt krijgt nog een korte fade */
+    var vh = window.innerHeight;
+    var later = [];
+    items.forEach(function (el) {
+      if (el.getBoundingClientRect().top < vh) {
+        el.style.transitionDelay = '0s';
+        el.classList.add('animation-in');
+      } else {
+        later.push(el);
+      }
+    });
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         if (en.isIntersecting || en.boundingClientRect.top < 0) {
@@ -52,8 +64,8 @@
           io.unobserve(en.target);
         }
       });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.01 });
-    items.forEach(function (el) { io.observe(el); });
+    }, { rootMargin: '0px 0px 0px 0px', threshold: 0 });
+    later.forEach(function (el) { io.observe(el); });
     /* header elements animate straight away */
     doc.querySelectorAll('.header-title-logo, .header-nav-item a, .header-actions > *').forEach(function (el, i) {
       el.classList.add('preSlide');
