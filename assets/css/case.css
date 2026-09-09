@@ -22,6 +22,11 @@
 .case-hero .case-facts{display:flex;flex-wrap:wrap;gap:1.2rem 2.5rem;margin:1.5vw 0 0;padding:1.4rem 0 0;border-top:1px solid hsla(var(--black-hsl),.2);list-style:none}
 .case-hero .case-facts small{display:block;font-size:.75rem;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3);margin-bottom:.3rem}
 .case-hero .case-facts b{font-weight:500;font-size:1rem;line-height:1.4}
+/* desktop: feiten altijd op één rij; lange waarden breken binnen hun kolom */
+@media (min-width:981px){
+  .case-hero .case-facts{flex-wrap:nowrap;gap:1.2rem 2.25rem}
+  .case-hero .case-facts li{flex:0 1 auto;min-width:0}
+}
 
 /* body met zijbalk */
 .case-layout{display:grid;grid-template-columns:minmax(0,52rem) 210px;gap:3rem 5rem;justify-content:center}
