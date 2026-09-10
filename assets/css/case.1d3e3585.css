@@ -126,3 +126,7 @@
   .case-hero .kicker span{flex-basis:100%;font-size:.85rem}
   .case-hero .kicker .dot{margin:0 .6em}
 }
+
+/* twee mockups naast elkaar */
+.case-main figure.duo{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;align-items:start}
+@media (max-width:560px){.case-main figure.duo{grid-template-columns:1fr;gap:1rem}}
