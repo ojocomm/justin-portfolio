@@ -11,8 +11,9 @@
 .case-hero .mock{margin:2vw auto 0;max-width:1060px}
 .case-hero .mock img{width:100%;height:auto;display:block}
 /* WP: ruimer canvas met volledige schaduw; negatieve marges houden de laptop op exact dezelfde plek */
-.page-case-wp .case-hero .mock,.page-case-ambiance .case-hero .mock{max-width:1103px}
-.page-case-wp .case-hero .mock img,.page-case-ambiance .case-hero .mock img{width:103.9%;max-width:none;margin:-9.74% -0.97% 0 -2.92%;pointer-events:none}
+.page-case-wp .case-hero .mock,.page-case-ambiance .case-hero .mock{max-width:1117px}
+/* canvas 1800x1150 met ruime schaduwmarges; zichtbaar kader 40..1600 x 140..1000 */
+.page-case-wp .case-hero .mock img,.page-case-ambiance .case-hero .mock img{width:115.38%;max-width:none;margin:-8.97% -12.82% -9.62% -2.56%;pointer-events:none}
 .case-hero .hero-in{max-width:1060px;margin:0 auto}
 .case-hero .kicker{display:flex;flex-wrap:wrap;gap:.3rem 1rem;align-items:baseline;font-weight:500;margin-bottom:1.4rem}
 .case-hero .kicker span{font-weight:400;font-size:.9rem;color:var(--ink-3);display:inline-flex;align-items:center}
