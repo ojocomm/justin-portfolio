@@ -128,5 +128,4 @@
 }
 
 /* twee mockups naast elkaar */
-.case-main figure.duo{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;align-items:start}
-@media (max-width:560px){.case-main figure.duo{grid-template-columns:1fr;gap:1rem}}
+.case-main figure.duo{display:grid;grid-template-columns:1fr;gap:1.4rem}
