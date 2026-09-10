@@ -131,3 +131,6 @@
 .page-portfolio .v2-work{padding-top:calc(var(--header-height) + 4.5vw)}
 .page-portfolio .pf-title{font-size:clamp(2.4rem,4.2vw,4rem);margin:0 0 1rem}
 .page-portfolio .pf-lead{margin-bottom:1.5vw;max-width:44ch}
+
+.v2-case .kicker span{flex-wrap:wrap;row-gap:.25rem}
+.v2-case .kicker em{font-style:normal;white-space:nowrap}
