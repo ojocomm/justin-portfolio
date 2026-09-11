@@ -134,3 +134,5 @@
 
 .v2-case .kicker span{flex-wrap:wrap;row-gap:.25rem}
 .v2-case .kicker em{font-style:normal;white-space:nowrap}
+
+.v2-clients li.erasmus{height:50px;opacity:.8}
