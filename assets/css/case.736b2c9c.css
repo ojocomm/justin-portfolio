@@ -130,3 +130,6 @@
 
 /* twee mockups naast elkaar */
 .case-main figure.duo{display:grid;grid-template-columns:1fr;gap:1.4rem}
+
+/* ETZ: drie staande telefoons, iets smaller zodat de hero niet te hoog wordt */
+.page-case-etz .case-hero .mock{max-width:880px}
