@@ -139,6 +139,6 @@
 @media (max-width:560px){.case-main figure.trio{gap:.6rem}}
 
 /* Hoppenbrouwers: tablet iets hoger, schaduw loopt onder door */
-.page-case-hoppenbrouwers .case-hero .mock{margin-top:0}
+.page-case-hoppenbrouwers .case-hero .mock{margin-top:0;max-width:1240px}
 /* foto's met ronde hoeken */
 .case-main figure.photo img{border-radius:14px}
