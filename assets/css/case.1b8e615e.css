@@ -133,3 +133,7 @@
 
 /* ETZ: drie staande telefoons, iets smaller zodat de hero niet te hoog wordt */
 .page-case-etz .case-hero .mock{max-width:880px}
+
+/* drie staande telefoons naast elkaar */
+.case-main figure.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;align-items:start}
+@media (max-width:560px){.case-main figure.trio{gap:.6rem}}
