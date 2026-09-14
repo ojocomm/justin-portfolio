@@ -1,0 +1,18 @@
+<main id="page" class="site-main v2">
+<section class="v2-work" id="werk" aria-labelledby="pf-title">
+  <div class="wrap">
+    <p class="eyebrow">Portfolio</p>
+    <h1 id="pf-title" class="pf-title">Geselecteerd werk</h1>
+    <p class="lead pf-lead">Elke case met de vraag, mijn aanpak en het resultaat.</p>
+<!--CARDS-->
+  </div>
+</section>
+</main>
+<script>
+(function(){
+  var els=document.querySelectorAll('.v2 .reveal');
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting||x.boundingClientRect.top<0){x.target.classList.add('in');io.unobserve(x.target);}});},{rootMargin:'0px 0px -8% 0px',threshold:.05});
+  els.forEach(function(e){io.observe(e);});
+})();
+</script>
