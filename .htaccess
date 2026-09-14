@@ -1,6 +1,12 @@
 # Schone URL's zoals op Squarespace: /about -> about.html
 Options -MultiViews
 RewriteEngine On
+# Live domein: altijd https en met www (canonicals gebruiken www). Raakt ojod6.sg-host.com niet.
+RewriteCond %{HTTP_HOST} ^justinnorman\.nl$ [NC]
+RewriteRule ^(.*)$ https://www.justinnorman.nl/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.justinnorman\.nl$ [NC]
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://www.justinnorman.nl/$1 [R=301,L]
 # Oude portfolio-URL
 RewriteRule ^home-1-2/?$ /portfolio [R=301,L]
 RewriteRule ^about-2/?$ /hoppenbrouwers [R=301,L]
