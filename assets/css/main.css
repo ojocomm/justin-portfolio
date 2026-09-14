@@ -403,3 +403,8 @@ svg.sqs-shape{display:block;overflow:visible;position:absolute;top:0;left:0;widt
 
 /* About: paginakop is een h1 (semantiek/SEO), visueel op h2-formaat */
 .page-about h1{font-size:var(--fs-h2);line-height:1.12;color:var(--headingColor)}
+
+.contact-form .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.contact-form .form-status.is-ok{color:#1d6b3a}
+.contact-form .form-status.is-err{color:#cc3b3b}
+.contact-form button[disabled]{opacity:.6;cursor:wait}

@@ -74,12 +74,15 @@
     });
   }
 
-  /* ---- contact form: no server behind a static site, so hand the message to the visitor's mail app */
+  /* ---- contact form: verstuurt via /contact.php; mailto als vangnet bij netwerkfout */
   var form = doc.querySelector('.contact-form');
   if (form) {
+    var tsField = form.querySelector('input[name="ts"]');
+    if (tsField) tsField.value = String(Math.floor(Date.now() / 1000));
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var status = form.querySelector('.form-status');
+      var btn = form.querySelector('button[type="submit"]');
       var invalid = false;
       form.querySelectorAll('[required]').forEach(function (f) {
         var bad = !f.value.trim() || (f.type === 'email' && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.value));
@@ -87,19 +90,29 @@
         f.setAttribute('aria-invalid', bad ? 'true' : 'false');
         invalid = invalid || bad;
       });
-      if (invalid) {
-        status.hidden = false;
-        status.textContent = 'Vul de verplichte velden in (naam en een geldig e-mailadres).';
-        return;
-      }
+      var show = function (msg, ok) {
+        status.hidden = false; status.textContent = msg;
+        status.classList.toggle('is-ok', !!ok); status.classList.toggle('is-err', !ok);
+      };
+      if (invalid) { show('Vul de verplichte velden in (naam en een geldig e-mailadres).', false); return; }
       var v = function (id) { return (form.querySelector('#' + id) || {}).value || ''; };
-      var subject = 'Contact via justinnorman.nl — ' + v('f-fname') + ' ' + v('f-lname');
-      var bodyTxt = 'Naam: ' + v('f-fname') + ' ' + v('f-lname') + '\nE-mail: ' + v('f-email') +
-        '\nTelefoon: ' + v('f-phone') + '\n\n' + v('f-message');
-      window.location.href = 'mailto:' + form.getAttribute('data-mailto') +
-        '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(bodyTxt);
-      status.hidden = false;
-      status.textContent = 'Je e-mailprogramma wordt geopend met het ingevulde bericht.';
+      var fallback = function () {
+        var subject = 'Contact via justinnorman.nl - ' + v('f-fname') + ' ' + v('f-lname');
+        var bodyTxt = 'Naam: ' + v('f-fname') + ' ' + v('f-lname') + '\nE-mail: ' + v('f-email') +
+          '\nTelefoon: ' + v('f-phone') + '\n\n' + v('f-message');
+        window.location.href = 'mailto:' + form.getAttribute('data-mailto') +
+          '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(bodyTxt);
+        show('Versturen via de site lukte niet; je e-mailprogramma wordt geopend.', false);
+      };
+      btn.disabled = true; show('Bezig met versturen…', true);
+      fetch(form.getAttribute('action'), { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+        .then(function (r) { return r.json().then(function (d) { return { ok: r.ok && d.ok, msg: d.message }; }); })
+        .then(function (res) {
+          btn.disabled = false;
+          if (res.ok) { show(res.msg, true); form.reset(); if (tsField) tsField.value = String(Math.floor(Date.now() / 1000)); }
+          else show(res.msg || 'Versturen is niet gelukt.', false);
+        })
+        .catch(function () { btn.disabled = false; fallback(); });
     });
   }
 })();
