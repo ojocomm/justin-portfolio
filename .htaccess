@@ -14,6 +14,8 @@ ErrorDocument 404 /404.html
 
 # HTML nooit lang cachen; CSS/JS/afbeeldingen hebben versienummers en mogen lang
 <IfModule mod_headers.c>
+  # Niet indexeren door zoekmachines (staging)
+  Header set X-Robots-Tag "noindex, nofollow, noarchive"
   <FilesMatch "\.html$">
     Header set Cache-Control "no-store, no-cache, must-revalidate"
     Header set X-Cache-Enabled "False"
